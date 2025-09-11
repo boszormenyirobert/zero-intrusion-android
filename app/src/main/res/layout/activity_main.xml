@@ -1,0 +1,309 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="top|center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#030712"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zero Intrusion Lock and"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/header_text_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypted Layers"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"/>
+
+    <!-- Scan QR Code Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/scan_card"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#1e2939"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_qr_code"
+                android:contentDescription="QR Icon"
+                app:tint="#FFFFFF" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:text="Scan QR Code"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_height="30dp"
+                    android:layout_width="265dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:text="Scan your device QR to authenticate quickly."
+                    android:textSize="14sp"
+                    android:layout_height="30dp"
+                    android:layout_width="265dp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Prepay Now Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/prepay_card"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#1e2939"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_payment"
+                android:contentDescription="Payment Icon"
+                app:tint="#FFFFFF" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:text="Prepay Now"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_height="30dp"
+                    android:layout_width="265dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:text="Prepay your subscription quickly and securely."
+                    android:textSize="14sp"
+                    android:layout_height="30dp"
+                    android:layout_width="265dp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Device Registration Card HIDE: android:visibility="gone" -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/register_card"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#1e2939"
+        android:clickable="true"
+        android:visibility="gone"
+        android:focusable="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_device"
+                android:contentDescription="Device Icon"
+                app:tint="#FFFFFF" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:text="Device Registration"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_height="30dp"
+                    android:layout_width="265dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:text="Register your device to access all features."
+                    android:textSize="14sp"
+                    android:layout_height="30dp"
+                    android:layout_width="265dp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Reset Registration Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/reset_card"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#580000"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_reset"
+                android:contentDescription="Reset Icon"
+                app:tint="#FFFFFF" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="265dp"
+                    android:layout_height="30dp"
+                    android:text="Reset - Development"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:text="Reset your device registration if needed."
+                    android:textSize="14sp"
+                    android:layout_height="30dp"
+                    android:layout_width="265dp"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Allow / Decline -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/allow_decline_card"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#580000"
+        android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <!-- Card 1 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/allow_card"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#580000"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- inner content here -->
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 2 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/decline_card"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#0055b9"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- inner content here -->
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:id="@+id/footer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All rights reserved 10.09.2025 by Zero Intrusion Lock and Layered Encryption"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"/>
+</LinearLayout>

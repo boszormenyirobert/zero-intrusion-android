@@ -1,1 +1,1 @@
-# zero-intrusion-android
+gcloud auth application-default print-access-token
