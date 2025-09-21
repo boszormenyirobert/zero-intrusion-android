@@ -13,6 +13,8 @@ import com.journeyapps.barcodescanner.CaptureActivity
 import com.zerointrusion.NetworkHelper.getDeviceRegistrationData
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
+import com.zerointrusion.MessageBus
+import org.json.JSONObject
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,6 +38,10 @@ class MainActivity : AppCompatActivity() {
         } else {
             handleCards()
        }
+
+        MessageBus.lastMessage.observe(this) { msg ->
+            myAutoUpdateFunction(msg)
+        }
     }
 
     private fun handleRegistration(){
@@ -99,5 +105,10 @@ class MainActivity : AppCompatActivity() {
 
 
         qrLauncher.launch(options)
+    }
+
+    private fun myAutoUpdateFunction(message: String) {
+        val qrJson = JSONObject(message)
+        Log.d("MAIN", "Function triggered with: $qrJson")
     }
 }
